@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - Transformative Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Universal box-sizing for consistent layout */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%; /* Ensure html and body take full width */
+            height: 100%; /* Ensure html and body take full height */
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: #333; /* Dark grey for body text */
+            overflow-x: hidden; /* Prevent horizontal scrolling for the entire page */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif; /* Serif font for headings */
+        }
+        /* Custom styles for image overlay and grayscale */
+        .card-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+        }
+        .grayscale-logo {
+            filter: grayscale(100%);
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Scroll Animation Styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Stagger hero elements slightly */
+        #workshops-hero .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+        #workshops-hero .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+        #workshops-hero .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+
+        /* Stagger workshop items slightly */
+        .workshop-item:nth-child(1) { transition-delay: 0.1s; }
+        .workshop-item:nth-child(2) { transition-delay: 0.2s; }
+        .workshop-item:nth-child(3) { transition-delay: 0.3s; }
+        .workshop-item:nth-child(4) { transition-delay: 0.4s; }
+        .workshop-item:nth-child(5) { transition-delay: 0.5s; }
+        .workshop-item:nth-child(6) { transition-delay: 0.6s; }
+
+        /* Custom style for workshop card date badge */
+        .date-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #004b6e; /* Primary blue */
+            color: white;
+            padding: 1rem 1.5rem;
+            border-bottom-left-radius: 1rem; /* Rounded bottom-left corner */
+            font-weight: bold;
+            font-size: 1.25rem; /* text-xl */
+            line-height: 1.75rem; /* leading-7 */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: translateY(-50%) translateX(50%) rotate(45deg); /* Rotate and position */
+            transform-origin: 100% 0%; /* Rotate from top-right corner */
+            width: 100px; /* Adjust width to fit content after rotation */
+            height: 100px; /* Adjust height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Hide overflow from rotation */
+        }
+
+        .date-badge span {
+            transform: rotate(-45deg); /* Counter-rotate text */
+            white-space: nowrap;
+            font-size: 1rem; /* Adjust font size for better fit */
+            line-height: 1.5rem; /* Adjust line height */
+        }
+
+        /* Adjust card padding to accommodate date badge */
+        .workshop-item .content-area {
+            padding: 1.5rem;
+            padding-top: 2.5rem; /* More padding at top to avoid overlap with badge */
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Sticky Header/Navbar -->
+ <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+    <img src="logo.PNG.jpg" alt="Company Logo" class="h-16 w-auto">
+            <!-- Desktop Navigation -->
+<nav class="hidden md:flex space-x-6 items-center">
+  <!-- Home -->
+  <a href="index.html#home" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Home</a>
+
+  <!-- About Us -->
+  <a href="about us.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">About Us</a>
+
+  <!-- Programs (Dropdown with Click) -->
+  <div class="relative">
+    <button id="programs-btn" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105 flex items-center">
+      Programs
+      <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    <!-- Dropdown menu -->
+    <div id="programs-menu" class="absolute hidden bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+      <a href="workshops.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">Workshops</a>
+      <a href="in-house.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">In-house</a>
+      <a href="virtual.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">Virtual</a>
+      <a href="open-enrollment.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">Open Enrollment</a>
+    </div>
+  </div>
+
+  <!-- Trainers -->
+  <a href="trainers.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Trainers</a>
+
+  <!-- Blog -->
+  <a href="blog.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Blog</a>
+
+  <!-- Contact Us -->
+  <!-- <a href="contact us.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Contact Us</a> -->
+</nav>
+
+            <a href="contact us.html" class="hidden md:block bg-[#004b6e] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">CONTACT</a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (initially hidden) -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 mt-2 px-4">
+            <a href="index.html#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Home</a>
+            <a href="about us.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">About</a>
+            <!-- <a href="gallery.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Gallery</a> -->
+            <a href="courses.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Courses</a>
+            <a href="trainers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Trainers</a>
+            <a href="workshops.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Workshops</a>
+            <!-- <a href="contact us.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Contact</a> -->
+                        <a href="In house.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">In house</a>
+            <a href="Open-enrollment.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Open enrollment</a>
+            <a href="contact us.html" class="block text-center bg-[#004b6e] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold mt-4">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Workshops Hero Section - Innovative Design -->
+    <section id="workshops-hero" class="bg-gradient-to-br from-blue-700 to-blue-900 py-16 md:py-24 lg:py-32 overflow-hidden relative">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white animate-on-scroll">Engage & Grow with Our Workshops</h1>
+            <p class="text-lg md:text-xl text-blue-200 mb-8 max-w-3xl mx-auto animate-on-scroll">
+                Participate in our focused, interactive workshops designed to provide hands-on experience and immediate skill enhancement.
+            </p>
+            <a href="#workshop-listing-section" class="inline-block bg-white text-blue-800 px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 font-semibold text-lg animate-on-scroll">
+                Explore Workshops
+            </a>
+        </div>
+        <!-- Abstract background elements - more dynamic -->
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 75h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 55h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 35h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 15h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 0v1h4v-1h-4zm-11 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 100px 100px;"></div>
+    </section>
+
+    <!-- Workshops Listing Section - New Style -->
+    <section id="workshop-listing-section" class="py-16 md:py-24 bg-gray-50 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#004b6e] animate-on-scroll">Our Upcoming Workshops</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Workshop Item 1 -->
+                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
+                    <div class="date-badge"><span>July<br>15</span></div>
+                    <div class="content-area p-6">
+                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Mindful Leadership Masterclass</h3>
+                        <p class="text-sm text-gray-600 mb-3">Learn to lead with greater awareness and emotional intelligence.</p>
+                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                            <li><strong class="font-medium">Format:</strong> Online Webinar</li>
+                            <li><strong class="font-medium">Duration:</strong> 3 Hours</li>
+                            <li><strong class="font-medium">Instructor:</strong> Jane Doe</li>
+                        </ul>
+                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                    </div>
+                </div>
+                <!-- Workshop Item 2 -->
+                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
+                    <div class="date-badge"><span>Aug<br>03</span></div>
+                    <div class="content-area p-6">
+                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Effective Communication Strategies</h3>
+                        <p class="text-sm text-gray-600 mb-3">Master the art of clear and impactful communication in any setting.</p>
+                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                            <li><strong class="font-medium">Format:</strong> In-person (NYC)</li>
+                            <li><strong class="font-medium">Duration:</strong> Full Day</li>
+                            <li><strong class="font-medium">Instructor:</strong> John Smith</li>
+                        </ul>
+                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                    </div>
+                </div>
+                <!-- Workshop Item 3 -->
+                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
+                    <div class="date-badge"><span>Sep<br>10</span></div>
+                    <div class="content-area p-6">
+                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Personal Productivity Hacks</h3>
+                        <p class="text-sm text-gray-600 mb-3">Boost your efficiency and achieve more with smart productivity techniques.</p>
+                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                            <li><strong class="font-medium">Format:</strong> Online Course</li>
+                            <li><strong class="font-medium">Duration:</strong> 2 Weeks</li>
+                            <li><strong class="font-medium">Instructor:</strong> Emily White</li>
+                        </ul>
+                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                    </div>
+                </div>
+                <!-- Workshop Item 4 -->
+                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
+                    <div class="date-badge"><span>Oct<br>05</span></div>
+                    <div class="content-area p-6">
+                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Digital Transformation Essentials</h3>
+                        <p class="text-sm text-gray-600 mb-3">Understand the core principles and strategies for digital success.</p>
+                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                            <li><strong class="font-medium">Format:</strong> Hybrid (Online + Onsite)</li>
+                            <li><strong class="font-medium">Duration:</strong> 4 Days</li>
+                            <li><strong class="font-medium">Instructor:</strong> Michael Brown</li>
+                        </ul>
+                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                    </div>
+                </div>
+                <!-- Workshop Item 5 -->
+                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
+                    <div class="date-badge"><span>Nov<br>12</span></div>
+                    <div class="content-area p-6">
+                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Advanced Conflict Resolution</h3>
+                        <p class="text-sm text-gray-600 mb-3">Develop advanced techniques for resolving complex interpersonal conflicts.</p>
+                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                            <li><strong class="font-medium">Format:</strong> In-person (London)</li>
+                            <li><strong class="font-medium">Duration:</strong> 2 Days</li>
+                            <li><strong class="font-medium">Instructor:</strong> Sarah Davis</li>
+                        </ul>
+                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                    </div>
+                </div>
+                <!-- Workshop Item 6 -->
+                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
+                    <div class="date-badge"><span>Dec<br>01</span></div>
+                    <div class="content-area p-6">
+                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Stress Management & Well-being</h3>
+                        <p class="text-sm text-gray-600 mb-3">Practical strategies for reducing stress and enhancing mental well-being.</p>
+                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                            <li><strong class="font-medium">Format:</strong> Online Seminar</li>
+                            <li><strong class="font-medium">Duration:</strong> 4 Hours</li>
+                            <li><strong class="font-medium">Instructor:</strong> Robert Johnson</li>
+                        </ul>
+                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.link/hyhvac" target="_blank" class="whatsapp-float">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+     alt="WhatsApp" 
+     class="w-8 h-8" />
+
+    </a>
+    <!-- Footer -->
+<footer class="bg-gradient-to-b from-blue-900 to-blue-800 text-gray-200 py-16">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl">
+    
+    <!-- Company Info -->
+    <div class="space-y-4">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+<img src="logo.PNG" 
+     alt="Icon" 
+     class="w-30 h-6" />
+
+        </div>
+        <h3 class="text-2xl font-bold text-white">Executive hub</h3>
+      </div>
+      <p class="text-blue-200 leading-relaxed">Leveling up your workforce with our highly rich-in-value trainings and workshops.</p>
+      <div class="space-y-1 text-blue-200">
+        <div class="flex items-start space-x-2">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>Opposite Attock Petrol Pump, Mansehra Plaza, AYAN Montessori Institute, Chakri Road, Rawalpindi.
+          </span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span>info@yourcompany.com</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          <span>+92 316 5350283</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-white font-bold text-lg mb-4 pb-2 border-b border-blue-700">Quick Links</h4>
+      <ul class="space-y-3">
+        <li><a href="index.html" class="text-blue-200 hover:text-white transition-colors duration-200 flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Home</a></li>
+        <li><a href="about us.html" class="text-blue-200 hover:text-white transition-colors duration-200 flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          About Us</a></li>
+        <li><a href="trainers.html" class="text-blue-200 hover:text-white transition-colors duration-200 flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          trainers</a></li>
+        <li><a href="blog1.html" class="text-blue-200 hover:text-white transition-colors duration-200 flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Blogs</a></li>
+        <li><a href="contact us.html" class="text-blue-200 hover:text-white transition-colors duration-200 flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h4 class="text-white font-bold text-lg mb-4 pb-2 border-b border-blue-700">Newsletter</h4>
+      <p class="text-blue-200 mb-4">Subscribe to receive updates, exclusive content, and special offers directly to your inbox.</p>
+      <form class="space-y-3">
+        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-blue-800 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-blue-300 transition-all duration-200">
+        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Subscribe
+        </button>
+      </form>
+      <p class="text-blue-300 text-xs mt-2">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h4 class="text-white font-bold text-lg mb-4 pb-2 border-b border-blue-700">Connect With Us</h4>
+      <p class="text-blue-200 mb-4">Follow us on social media for the latest news and updates.</p>
+      <div class="flex space-x-3">
+<a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center transition-colors duration-200 group">
+  <svg class="w-5 h-5 text-blue-200 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.24 8.5h4.52V24H.24V8.5zm7.98 0h4.33v2.11h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V24h-4.71v-7.9c0-1.89-.03-4.32-2.63-4.32-2.63 0-3.03 2.05-3.03 4.17V24H8.22V8.5z"/>
+  </svg>
+</a>
+
+        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center transition-colors duration-200 group">
+          <svg class="w-5 h-5 text-blue-200 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.491 5.001C14.86 5.001 15 5.001 15 5.001v2.5h-1.5c-1.848 0-2 0-2 2v1.5h3.5l-.5 3.5h-3v8.5H7.5v-8.5H4v-3.5h3.5v-2.5c0-3.5 2.5-5 6.5-5z"></path>
+          </svg>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center transition-colors duration-200 group">
+          <svg class="w-5 h-5 text-blue-200 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.19 6.08a8.014 8.014 0 01-2.357.646 4.004 4.004 0 001.755-2.275 8.014 8.014 0 01-2.59.988 4.004 4.004 0 00-6.79 3.646 11.334 11.334 0 01-8.232-4.162 4.004 4.004 0 001.24 5.344 3.992 3.992 0 01-1.814-.5v.05c0 1.952 1.39 3.58 3.23 3.957a4.004 4.004 0 01-1.79.068c.514 1.606 2.006 2.771 3.77 2.804A8.014 8.014 0 013 16.918a11.306 11.306 0 006.227 1.82c7.47 0 11.55-6.184 11.55-11.55 0-.177-.004-.354-.012-.529a8.38 8.38 0 002.05-2.12z"></path>
+          </svg>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center transition-colors duration-200 group">
+          <svg class="w-5 h-5 text-blue-200 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="mt-6">
+        <h5 class="text-white font-medium mb-2">Business Hours</h5>
+        <ul class="text-blue-200 space-y-1 text-sm">
+          <li class="flex justify-between">
+            <span>Monday - Friday</span>
+            <span>9:00 AM - 5:00 PM</span>
+          </li>
+          <li class="flex justify-between">
+            <span>Saturday</span>
+            <span>10:00 AM - 2:00 PM</span>
+          </li>
+          <li class="flex justify-between">
+            <span>Sunday</span>
+            <span>Closed</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 pt-6 border-t border-blue-700">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <p class="text-blue-300 text-sm mb-2 md:mb-0">&copy; 2025 Transformative Growth. All rights reserved.</p>
+      <div class="flex space-x-4 justify-center">
+        <a href="#" class="text-blue-300 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
+        <a href="#" class="text-blue-300 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
+        <a href="#" class="text-blue-300 hover:text-white text-sm transition-colors duration-200">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>    <script>
+        const btn = document.getElementById('programs-btn');
+  const menu = document.getElementById('programs-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Close if clicking outside
+  window.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+
+                // Close mobile menu if clicked outside
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Scroll Animation (Intersection Observer) - applies to all animate-on-scroll elements
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+                rootMargin: '0px 0px -50px 0px' // Adjust bottom margin to trigger slightly earlier
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
