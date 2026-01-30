@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Management in the Age of Artificial Intelligence - Transformative Growth</title>
+    <title>Advanced Supply Chain Management - Transformative Growth</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -171,21 +171,20 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center text-white">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-on-scroll">
-                    MANAGEMENT IN THE AGE OF ARTIFICIAL INTELLIGENCE
+                    ADVANCED SUPPLY CHAIN MANAGEMENT
                 </h1>
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-blue-100 animate-on-scroll" style="transition-delay: 0.1s">
-                    Leading Through the Augmented Intelligence Revolution
+                    Architecting Resilient and Data-Driven Global Networks
                 </h2>
                 <p class="text-xl md:text-2xl text-blue-50 mb-10 animate-on-scroll" style="transition-delay: 0.2s">
-                    Transform from <span class="font-bold">managing tasks</span> to <span class="font-bold">managing algorithms</span> and outcomes
+                    Transforming <span class="font-bold">traditional logistics</span> into <span class="font-bold">synchronized, end-to-end value networks</span>
                 </p>
             </div>
         </div>
     </section>
 
-            <img src="https://images.pexels.com/photos/16461434/pexels-photo-16461434.jpeg" alt="Blog Post Main Image" class="w-full h-auto rounded-lg mt-6 shadow-md">
     <!-- Course Overview Section -->
-    <section class="py-12 md:py-20 bg-white">
+    <section class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
                 <!-- Course Description -->
@@ -195,13 +194,13 @@
                     </h2>
                     <div class="bg-gray-50 rounded-xl p-6 md:p-8 shadow-sm">
                         <p class="text-lg md:text-xl text-gray-700 mb-6">
-                            We are currently witnessing the fastest technological shift in human history. Management in the Age of Artificial Intelligence is a visionary workshop designed for leaders who recognize that AI is not just an IT upgrade, but a total restructuring of how business value is created.
+                            In an era of global volatility and fluctuating demand, the supply chain has moved from the warehouse to the boardroom. The Advanced Supply Chain Management workshop is an elite-level program designed to help organizations transition from traditional logistics to synchronized, end-to-end value networks.
                         </p>
                         <p class="text-lg md:text-xl text-gray-700 mb-6">
-                            This workshop moves beyond the hype of "automation" to explore the concept of Augmented Intelligence—the synergy between human intuition and machine precision. We address the critical shift from "managing tasks" to "managing algorithms and outcomes."
+                            This workshop addresses the complexities of modern global trade, focusing on the integration of procurement, manufacturing, and distribution. We move beyond simple "transportation" to explore the strategic management of flows—information, material, and financial. Participants will engage with advanced concepts in demand forecasting, inventory optimization, and "Lean" methodologies.
                         </p>
                         <p class="text-lg md:text-xl text-gray-700">
-                            Participants will explore the ethical, operational, and strategic implications of integrating Generative AI and Machine Learning into their workflows. By the end of this session, leaders will be equipped to identify AI opportunities, mitigate algorithmic bias, and lead their teams through the psychological transition of the AI-augmented workplace.
+                            By focusing on agility and resilience, this workshop empowers professionals to build supply chains that can withstand external shocks while maintaining peak operational efficiency and cost-effectiveness.
                         </p>
                     </div>
                 </div>
@@ -212,43 +211,43 @@
                         <span class="highlight-text">THE CONCEPTUAL CORE</span>
                     </h2>
                     <p class="text-xl text-gray-700 mb-10 text-center max-w-3xl mx-auto">
-                        The foundation of this workshop is built upon four critical pillars of AI-driven leadership:
+                        The architecture of this workshop is built upon four critical pillars of supply chain mastery:
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <!-- Pillar 1 -->
                         <div class="concept-card bg-white p-6 rounded-xl shadow-md border border-gray-200 animate-on-scroll">
                             <div class="text-4xl font-bold text-[#004b6e] mb-4">01</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">The AI Strategy Framework</h3>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Predictive Demand Planning</h3>
                             <p class="text-gray-600">
-                                Learning how to distinguish between AI myths and business realities. We focus on identifying high-ROI use cases where AI can solve specific organizational bottlenecks.
+                                Moving from historical guessing to data-driven forecasting. We teach how to use statistical models and market signals to align inventory levels with actual customer demand.
                             </p>
                         </div>
                         
                         <!-- Pillar 2 -->
                         <div class="concept-card bg-white p-6 rounded-xl shadow-md border border-gray-200 animate-on-scroll" style="transition-delay: 0.1s">
                             <div class="text-4xl font-bold text-[#004b6e] mb-4">02</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Prompt Engineering for Executives</h3>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">The Bullwhip Effect Mitigation</h3>
                             <p class="text-gray-600">
-                                Mastering the language of AI. We teach leaders how to effectively communicate with Large Language Models (LLMs) to generate strategy drafts, analyze market data, and automate routine reporting.
+                                Understanding how small fluctuations at the retail level can cause massive distortions upstream. We focus on information sharing and collaborative planning (CPFR) to stabilize the network.
                             </p>
                         </div>
                         
                         <!-- Pillar 3 -->
                         <div class="concept-card bg-white p-6 rounded-xl shadow-md border border-gray-200 animate-on-scroll" style="transition-delay: 0.2s">
                             <div class="text-4xl font-bold text-[#004b6e] mb-4">03</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Algorithmic Accountability & Ethics</h3>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Total Cost of Ownership (TCO) & Logistics</h3>
                             <p class="text-gray-600">
-                                Navigating the "Black Box." Understanding the ethical responsibilities of AI usage, including data privacy, bias detection, and ensuring transparency in AI-assisted decision-making.
+                                Analyzing the true cost of the supply chain. We explore the trade-offs between speed, cost, and service levels, ensuring that logistics decisions support the overall financial health of the firm.
                             </p>
                         </div>
                         
                         <!-- Pillar 4 -->
                         <div class="concept-card bg-white p-6 rounded-xl shadow-md border border-gray-200 animate-on-scroll" style="transition-delay: 0.3s">
                             <div class="text-4xl font-bold text-[#004b6e] mb-4">04</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">The Future of Work & Reskilling</h3>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Digital Supply Chain (Industry 4.0)</h3>
                             <p class="text-gray-600">
-                                Managing the human transition. We provide strategies for up-skilling the workforce, ensuring that AI is seen as a tool for empowerment rather than a threat to job security.
+                                Integrating technology such as IoT for real-time tracking, Blockchain for transparency, and AI for route optimization and warehouse automation.
                             </p>
                         </div>
                     </div>
@@ -260,25 +259,25 @@
                         <span class="highlight-text">WHO MUST ATTEND?</span>
                     </h2>
                     <p class="text-xl text-gray-700 mb-10 max-w-3xl">
-                        This workshop is essential for the architects of the future organization:
+                        This workshop is vital for those responsible for the movement of value:
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
                             <h3 class="text-xl font-bold text-[#004b6e] mb-4">Primary Audience</h3>
                             <ul class="space-y-3">
-                                <li class="benefit-item text-gray-700">C-Suite Executives and Directors responsible for long-term strategic planning.</li>
-                                <li class="benefit-item text-gray-700">Departmental Managers looking to automate workflows and increase team throughput.</li>
-                                <li class="benefit-item text-gray-700">Operations and Supply Chain Leads aiming to leverage predictive analytics.</li>
+                                <li class="benefit-item text-gray-700">Supply Chain and Logistics Directors overseeing complex national or international networks.</li>
+                                <li class="benefit-item text-gray-700">Procurement and Sourcing Managers looking to integrate more closely with operations.</li>
+                                <li class="benefit-item text-gray-700">Warehouse and Inventory Managers aiming to reduce carrying costs and improve turnover.</li>
                             </ul>
                         </div>
                         
                         <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
                             <h3 class="text-xl font-bold text-[#004b6e] mb-4">Secondary Audience</h3>
                             <ul class="space-y-3">
-                                <li class="benefit-item text-gray-700">HR Leaders tasked with managing the workforce evolution and talent acquisition in an AI era.</li>
-                                <li class="benefit-item text-gray-700">Entrepreneurs seeking to build "AI-first" scalable business models.</li>
-                                <li class="benefit-item text-gray-700">Technology Managers and IT Directors implementing AI solutions.</li>
+                                <li class="benefit-item text-gray-700">Operations and Manufacturing Leads who depend on timely material flow.</li>
+                                <li class="benefit-item text-gray-700">Business Analysts tasked with optimizing supply chain data and performance metrics.</li>
+                                <li class="benefit-item text-gray-700">Distribution and Transportation Managers seeking advanced logistics strategies.</li>
                             </ul>
                         </div>
                     </div>
@@ -294,12 +293,12 @@
                         <div class="flex flex-col md:flex-row items-start gap-8">
                             <div class="md:w-2/3">
                                 <blockquote class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 italic">
-                                    "From traditional managers to AI-augmented leaders."
+                                    "From traditional logistics to synchronized value networks."
                                 </blockquote>
                                 
                                 <div class="space-y-4">
                                     <p class="text-lg text-gray-700">
-                                        Executive Hub provides a unique training environment where our diverse and highly experienced trainers deliver value to the fullest extent. By blending formal corporate standards with modern energetic delivery, we ensure that every participant masters the complexities of management in the age of artificial intelligence within the specific context of the Pakistani market.
+                                        Executive Hub provides a unique training environment where our diverse and highly experienced trainers deliver value to the fullest extent. By blending formal corporate standards with modern energetic delivery, we ensure that every participant masters the complexities of advanced supply chain management within the specific context of the Pakistani market.
                                     </p>
                                     
                                     <p class="text-lg text-gray-700">
@@ -307,11 +306,11 @@
                                     </p>
                                     
                                     <ul class="space-y-3">
-                                        <li class="benefit-item text-gray-700">Practical AI strategy development frameworks</li>
-                                        <li class="benefit-item text-gray-700">Pakistan-specific AI implementation case studies</li>
-                                        <li class="benefit-item text-gray-700">Hands-on prompt engineering and LLM interaction</li>
-                                        <li class="benefit-item text-gray-700">AI ethics and algorithmic bias mitigation strategies</li>
-                                        <li class="benefit-item text-gray-700">Post-workshop AI integration roadmap development</li>
+                                        <li class="benefit-item text-gray-700">Predictive demand planning and inventory optimization</li>
+                                        <li class="benefit-item text-gray-700">Pakistan-specific supply chain and logistics frameworks</li>
+                                        <li class="benefit-item text-gray-700">Bullwhip effect mitigation and network stabilization</li>
+                                        <li class="benefit-item text-gray-700">Total cost of ownership analysis and trade-off optimization</li>
+                                        <li class="benefit-item text-gray-700">Digital transformation and Industry 4.0 integration strategies</li>
                                     </ul>
                                 </div>
                             </div>
@@ -326,7 +325,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                                 </svg>
                                             </div>
-                                            <span class="text-gray-700">Localized for Pakistani business environment</span>
+                                            <span class="text-gray-700">Pakistan logistics and trade compliance frameworks</span>
                                         </li>
                                         <li class="flex items-start">
                                             <div class="bg-blue-100 p-2 rounded-lg mr-3">
@@ -334,15 +333,15 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                                                 </svg>
                                             </div>
-                                            <span class="text-gray-700">Practical AI prompt engineering labs</span>
+                                            <span class="text-gray-700">Data-driven supply chain analytics implementation</span>
                                         </li>
                                         <li class="flex items-start">
                                             <div class="bg-blue-100 p-2 rounded-lg mr-3">
                                                 <svg class="w-5 h-5 text-[#004b6e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 a3 3 0 016 0zm6 3a2 2 0 11-4 0 a2 2 0 014 0zM7 10a2 2 0 11-4 0 a2 2 0 014 0z"></path>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                                                 </svg>
                                             </div>
-                                            <span class="text-gray-700">Experienced AI implementation practitioners</span>
+                                            <span class="text-gray-700">Experienced supply chain leadership practitioners</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -461,7 +460,7 @@
                     </a>
                     <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center transition-colors duration-200 group">
                         <svg class="w-5 h-5 text-blue-200 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M22.19 6.08a8.014 8.014 0 01-2.357.646 a4.004 4.004 0 001.755-2.275 a8.014 8.014 0 01-2.59.988 a4.004 4.004 0 00-6.79 3.646 11.334 11.334 0 01-8.232-4.162 a4.004 4.004 0 001.24 5.344 a3.992 3.992 0 01-1.814-.5v.05c0 1.952 1.39 3.58 3.23 3.957a4.004 4.004 0 01-1.79.068c.514 1.606 2.006 2.771 3.77 2.804A8.014 8.014 0 013 16.918a11.306 11.306 0 006.227 1.82c7.47 0 11.55-6.184 11.55-11.55 0-.177-.004-.354-.012-.529a8.38 8.38 0 002.05-2.12z"></path>
+                            <path d="M22.19 6.08a8.014 8.014 0 01-2.357.646 4.004 4.004 0 001.755-2.275 8.014 8.014 0 01-2.59.988 4.004 4.004 0 00-6.79 3.646 11.334 11.334 0 01-8.232-4.162 4.004 4.004 0 001.24 5.344 3.992 3.992 0 01-1.814-.5v.05c0 1.952 1.39 3.58 3.23 3.957a4.004 4.004 0 01-1.79.068c.514 1.606 2.006 2.771 3.77 2.804A8.014 8.014 0 013 16.918a11.306 11.306 0 006.227 1.82c7.47 0 11.55-6.184 11.55-11.55 0-.177-.004-.354-.012-.529a8.38 8.38 0 002.05-2.12z"></path>
                         </svg>
                     </a>
                     <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center transition-colors duration-200 group">
