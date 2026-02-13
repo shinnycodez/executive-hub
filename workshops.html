@@ -12,16 +12,16 @@
             box-sizing: border-box;
         }
         html, body {
-            width: 100%; /* Ensure html and body take full width */
-            height: 100%; /* Ensure html and body take full height */
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            color: #333; /* Dark grey for body text */
-            overflow-x: hidden; /* Prevent horizontal scrolling for the entire page */
+            color: #333;
+            overflow-x: hidden;
         }
         h1, h2, h3 {
-            font-family: 'Playfair Display', serif; /* Serif font for headings */
+            font-family: 'Playfair Display', serif;
         }
         /* Custom styles for image overlay and grayscale */
         .card-overlay {
@@ -34,7 +34,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25D366; /* WhatsApp green */
+            background-color: #25D366;
             color: white;
             border-radius: 50%;
             padding: 15px;
@@ -64,50 +64,24 @@
         #workshops-hero .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
         #workshops-hero .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
 
-        /* Stagger workshop items slightly */
-        .workshop-item:nth-child(1) { transition-delay: 0.1s; }
-        .workshop-item:nth-child(2) { transition-delay: 0.2s; }
-        .workshop-item:nth-child(3) { transition-delay: 0.3s; }
-        .workshop-item:nth-child(4) { transition-delay: 0.4s; }
-        .workshop-item:nth-child(5) { transition-delay: 0.5s; }
-        .workshop-item:nth-child(6) { transition-delay: 0.6s; }
-
-        /* Custom style for workshop card date badge */
-        .date-badge {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: #004b6e; /* Primary blue */
-            color: white;
-            padding: 1rem 1.5rem;
-            border-bottom-left-radius: 1rem; /* Rounded bottom-left corner */
-            font-weight: bold;
-            font-size: 1.25rem; /* text-xl */
-            line-height: 1.75rem; /* leading-7 */
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transform: translateY(-50%) translateX(50%) rotate(45deg); /* Rotate and position */
-            transform-origin: 100% 0%; /* Rotate from top-right corner */
-            width: 100px; /* Adjust width to fit content after rotation */
-            height: 100px; /* Adjust height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden; /* Hide overflow from rotation */
-        }
-
-        .date-badge span {
-            transform: rotate(-45deg); /* Counter-rotate text */
-            white-space: nowrap;
-            font-size: 1rem; /* Adjust font size for better fit */
-            line-height: 1.5rem; /* Adjust line height */
-        }
-
-        /* Adjust card padding to accommodate date badge */
-        .workshop-item .content-area {
-            padding: 1.5rem;
-            padding-top: 2.5rem; /* More padding at top to avoid overlap with badge */
-        }
+        /* Stagger workshop items */
+        .grid > a:nth-child(1) { transition-delay: 0.1s; }
+        .grid > a:nth-child(2) { transition-delay: 0.2s; }
+        .grid > a:nth-child(3) { transition-delay: 0.3s; }
+        .grid > a:nth-child(4) { transition-delay: 0.4s; }
+        .grid > a:nth-child(5) { transition-delay: 0.5s; }
+        .grid > a:nth-child(6) { transition-delay: 0.6s; }
+        .grid > a:nth-child(7) { transition-delay: 0.7s; }
+        .grid > a:nth-child(8) { transition-delay: 0.8s; }
+        .grid > a:nth-child(9) { transition-delay: 0.9s; }
+        .grid > a:nth-child(10) { transition-delay: 1.0s; }
+        .grid > a:nth-child(11) { transition-delay: 1.1s; }
+        .grid > a:nth-child(12) { transition-delay: 1.2s; }
+        .grid > a:nth-child(13) { transition-delay: 1.3s; }
+        .grid > a:nth-child(14) { transition-delay: 1.4s; }
+        .grid > a:nth-child(15) { transition-delay: 1.5s; }
+        .grid > a:nth-child(16) { transition-delay: 1.6s; }
+        .grid > a:nth-child(17) { transition-delay: 1.7s; }
     </style>
 </head>
 <body class="bg-white">
@@ -115,18 +89,18 @@
     <!-- Sticky Header/Navbar -->
  <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
-    <img src="logo.PNG.jpg" alt="Company Logo" class="h-16 w-auto">
+    <img src="logo.PNG" alt="Company Logo" class="h-16 w-auto">
             <!-- Desktop Navigation -->
 <nav class="hidden md:flex space-x-6 items-center">
   <!-- Home -->
-  <a href="index.html#home" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Home</a>
+  <a href="index.html#home" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Home</a>
 
   <!-- About Us -->
-  <a href="about us.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">About Us</a>
+  <a href="about us.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">About Us</a>
 
   <!-- Programs (Dropdown with Click) -->
   <div class="relative">
-    <button id="programs-btn" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105 flex items-center">
+    <button id="programs-btn" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105 flex items-center">
       Programs
       <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -142,16 +116,16 @@
   </div>
 
   <!-- Trainers -->
-  <a href="trainers.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Trainers</a>
+  <a href="trainers.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Trainers</a>
 
   <!-- Blog -->
-  <a href="blog.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Blog</a>
+  <a href="blog.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Blog</a>
 
   <!-- Contact Us -->
-  <!-- <a href="contact us.html" class="text-gray-700 hover:text-[#004b6e] font-medium transition duration-300 transform hover:scale-105">Contact Us</a> -->
+  <!-- <a href="contact us.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Contact Us</a> -->
 </nav>
 
-            <a href="contact us.html" class="hidden md:block bg-[#004b6e] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">CONTACT</a>
+            <a href="contact us.html" class="hidden md:block bg-[#061852] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">CONTACT</a>
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -166,16 +140,15 @@
             <a href="trainers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Trainers</a>
             <a href="workshops.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Workshops</a>
             <!-- <a href="contact us.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Contact</a> -->
-                        <a href="In house.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">In house</a>
-            <a href="Open-enrollment.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Open enrollment</a>
-            <a href="contact us.html" class="block text-center bg-[#004b6e] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold mt-4">Contact</a>
+
+            <a href="contact us.html" class="block text-center bg-[#061852] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold mt-4">Contact</a>
         </nav>
     </header>
 
     <!-- Workshops Hero Section - Innovative Design -->
     <section id="workshops-hero" class="bg-gradient-to-br from-blue-700 to-blue-900 py-16 md:py-24 lg:py-32 overflow-hidden relative">
         <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white animate-on-scroll">Engage & Grow with Our Workshops</h1>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white animate-on-scroll">Engage & Grow with Our Workshops (In-house / Online)</h1>
             <p class="text-lg md:text-xl text-blue-200 mb-8 max-w-3xl mx-auto animate-on-scroll">
                 Participate in our focused, interactive workshops designed to provide hands-on experience and immediate skill enhancement.
             </p>
@@ -184,98 +157,143 @@
             </a>
         </div>
         <!-- Abstract background elements - more dynamic -->
-        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 75h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 55h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 35h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 15h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 0v1h4v-1h-4zm-11 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 100px 100px;"></div>
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 75h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 55h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 35h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 15h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h96v-95h1v95h-1zm-11 1h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zm-20 0h-10v-10h10v10zM96 0v1h4v-1h-4zm-11 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4zm-20 0v1h4v-1h-4z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 100px 100px;"></div>
     </section>
 
-    <!-- Workshops Listing Section - New Style -->
-    <section id="workshop-listing-section" class="py-16 md:py-24 bg-gray-50 relative">
+    <!-- Workshops Listing Section - Replaced with actual training services -->
+    <section id="workshop-listing-section" class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#004b6e] animate-on-scroll">Our Upcoming Workshops</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Workshop Item 1 -->
-                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
-                    <div class="date-badge"><span>July<br>15</span></div>
-                    <div class="content-area p-6">
-                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Mindful Leadership Masterclass</h3>
-                        <p class="text-sm text-gray-600 mb-3">Learn to lead with greater awareness and emotional intelligence.</p>
-                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                            <li><strong class="font-medium">Format:</strong> Online Webinar</li>
-                            <li><strong class="font-medium">Duration:</strong> 3 Hours</li>
-                            <li><strong class="font-medium">Instructor:</strong> Jane Doe</li>
-                        </ul>
-                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#061852] animate-on-scroll">Our Training Workshops</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- CYBER SECURITY WORKSHOP -->
+                <a href="cybersecurity.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://images.pexels.com/photos/5475752/pexels-photo-5475752.jpeg" alt="Cyber Security Workshop" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">CYBER SECURITY WORKSHOP</h3>
                     </div>
-                </div>
-                <!-- Workshop Item 2 -->
-                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
-                    <div class="date-badge"><span>Aug<br>03</span></div>
-                    <div class="content-area p-6">
-                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Effective Communication Strategies</h3>
-                        <p class="text-sm text-gray-600 mb-3">Master the art of clear and impactful communication in any setting.</p>
-                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                            <li><strong class="font-medium">Format:</strong> In-person (NYC)</li>
-                            <li><strong class="font-medium">Duration:</strong> Full Day</li>
-                            <li><strong class="font-medium">Instructor:</strong> John Smith</li>
-                        </ul>
-                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                </a>
+
+                <!-- EFFECTIVE PURCHASE MANAGEMENT -->
+                <a href="effective purchase management.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/4a/1a/36/4a1a3673a64269926efccc0e1b863fe5.jpg" alt="Effective Purchase Management" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">EFFECTIVE PURCHASE MANAGEMENT</h3>
                     </div>
-                </div>
-                <!-- Workshop Item 3 -->
-                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
-                    <div class="date-badge"><span>Sep<br>10</span></div>
-                    <div class="content-area p-6">
-                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Personal Productivity Hacks</h3>
-                        <p class="text-sm text-gray-600 mb-3">Boost your efficiency and achieve more with smart productivity techniques.</p>
-                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                            <li><strong class="font-medium">Format:</strong> Online Course</li>
-                            <li><strong class="font-medium">Duration:</strong> 2 Weeks</li>
-                            <li><strong class="font-medium">Instructor:</strong> Emily White</li>
-                        </ul>
-                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                </a>
+
+                <!-- HIGH IMPACT COMMUNICATION SKILLS -->
+                <a href="High Impact Communication Skills.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/a8/92/f7/a892f7c3c89c26a2d4a1c06dca712d98.jpg" alt="High Impact Communication Skills" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">HIGH IMPACT COMMUNICATION SKILLS</h3>
                     </div>
-                </div>
-                <!-- Workshop Item 4 -->
-                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
-                    <div class="date-badge"><span>Oct<br>05</span></div>
-                    <div class="content-area p-6">
-                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Digital Transformation Essentials</h3>
-                        <p class="text-sm text-gray-600 mb-3">Understand the core principles and strategies for digital success.</p>
-                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                            <li><strong class="font-medium">Format:</strong> Hybrid (Online + Onsite)</li>
-                            <li><strong class="font-medium">Duration:</strong> 4 Days</li>
-                            <li><strong class="font-medium">Instructor:</strong> Michael Brown</li>
-                        </ul>
-                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                </a>
+
+                <!-- WORKSHOP ON PROJECT MANAGEMENT -->
+                <a href="Project Management.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/1200x/55/07/e9/5507e9fb9f7d3ae87c1d841abe1d0921.jpg" alt="Workshop on Project Management" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">WORKSHOP ON PROJECT MANAGEMENT</h3>
                     </div>
-                </div>
-                <!-- Workshop Item 5 -->
-                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
-                    <div class="date-badge"><span>Nov<br>12</span></div>
-                    <div class="content-area p-6">
-                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Advanced Conflict Resolution</h3>
-                        <p class="text-sm text-gray-600 mb-3">Develop advanced techniques for resolving complex interpersonal conflicts.</p>
-                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                            <li><strong class="font-medium">Format:</strong> In-person (London)</li>
-                            <li><strong class="font-medium">Duration:</strong> 2 Days</li>
-                            <li><strong class="font-medium">Instructor:</strong> Sarah Davis</li>
-                        </ul>
-                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                </a>
+
+                <!-- CUSTOMER SERVICE EXCELLENCE -->
+                <a href="Customer Service Excellence.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/a6/0d/89/a60d896f649b9f65da947a7e97a4e67b.jpg" alt="Customer Service Excellence" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">CUSTOMER SERVICE EXCELLENCE</h3>
                     </div>
-                </div>
-                <!-- Workshop Item 6 -->
-                <div class="workshop-item relative bg-white rounded-xl shadow-lg group hover:shadow-xl hover:scale-[1.02] transition duration-300 transform animate-on-scroll overflow-hidden border border-gray-100">
-                    <div class="date-badge"><span>Dec<br>01</span></div>
-                    <div class="content-area p-6">
-                        <h3 class="text-xl font-bold text-[#004b6e] mb-2">Stress Management & Well-being</h3>
-                        <p class="text-sm text-gray-600 mb-3">Practical strategies for reducing stress and enhancing mental well-being.</p>
-                        <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                            <li><strong class="font-medium">Format:</strong> Online Seminar</li>
-                            <li><strong class="font-medium">Duration:</strong> 4 Hours</li>
-                            <li><strong class="font-medium">Instructor:</strong> Robert Johnson</li>
-                        </ul>
-                        <button class="inline-block bg-[#004b6e] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold">Register Now</button>
+                </a>
+
+                <!-- TEAMWORK: GETTING PEOPLE TO WORK TOGETHER -->
+                <a href="Getting People to Work Together.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/15/30/3d/15303db09e01eef47d93232e29248d7e.jpg" alt="Teamwork: Getting People to Work Together" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">TEAMWORK: GETTING PEOPLE TO WORK TOGETHER</h3>
                     </div>
-                </div>
+                </a>
+
+                <!-- MANAGING MULTIPLE PROJECTS -->
+                <a href="Managing Multiple Projects.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/a0/9e/94/a09e94c2637e00029fe3ea5dcf51035c.jpg" alt="Managing Multiple Projects" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">MANAGING MULTIPLE PROJECTS</h3>
+                    </div>
+                </a>
+
+                <!-- PERFORMANCE BASED MANAGEMENT -->
+                <a href="Performance Based Management.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/de/e9/04/dee904551dbf5e3ce58c109d49d267ca.jpg" alt="Performance Based Management" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">PERFORMANCE BASED MANAGEMENT</h3>
+                    </div>
+                </a>
+
+                <!-- HUMAN RESOURCE MANAGEMENT -->
+                <a href="Human resource management.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/1200x/d8/09/96/d80996d9059fcc8a5ab73df357c99132.jpg" alt="Human Resource Management" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">HUMAN RESOURCE MANAGEMENT</h3>
+                    </div>
+                </a>
+
+                <!-- EFFECTIVE PRESENTATION SKILLS -->
+                <a href="effective presentation skills.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/1200x/13/ba/9b/13ba9bd752df71b0a5019e5cfaf2bef4.jpg" alt="Effective Presentation Skills" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">EFFECTIVE PRESENTATION SKILLS</h3>
+                    </div>
+                </a>
+
+                <!-- DESIGN THINKING FOR INNOVATION -->
+                <a href="Design Thinking for Innovation.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/03/a0/44/03a044d8128b74c0e02611b5ef640a48.jpg" alt="Design Thinking for Innovation" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">DESIGN THINKING FOR INNOVATION</h3>
+                    </div>
+                </a>
+
+                <!-- SKILLS IN ADMINISTRATION -->
+                <a href="skills in administration.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/1200x/2f/10/97/2f1097c3164a262a6d09b1bed58f4805.jpg" alt="Skills in Administration" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">SKILLS IN ADMINISTRATION</h3>
+                    </div>
+                </a>
+
+                <!-- MANAGEMENT IN THE AGE OF ARTIFICIAL INTELLIGENCE -->
+                <a href="Artificial Intelligence.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/9b/8d/75/9b8d75f61c49686aff5b48259b4c796c.jpg" alt="Management in the Age of AI" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">MANAGEMENT IN THE AGE OF ARTIFICIAL INTELLIGENCE</h3>
+                    </div>
+                </a>
+
+                <!-- ADVANCED SUPPLY CHAIN MANAGEMENT -->
+                <a href="advance supply chain" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/e6/aa/f2/e6aaf28902a2703b24731478eeb9c4ab.jpg" alt="Advanced Supply Chain Management" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">ADVANCED SUPPLY CHAIN MANAGEMENT</h3>
+                    </div>
+                </a>
+
+                <!-- DEVELOPING EMPLOYEE PERFORMANCE MEASUREMENT & KPI'S SYSTEM -->
+                <a href="employee performance.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/1200x/ae/08/6e/ae086ecb7145be9b9cf55e75351c0e42.jpg" alt="Developing KPI System" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">DEVELOPING EMPLOYEE PERFORMANCE MEASUREMENT & KPI'S SYSTEM</h3>
+                    </div>
+                </a>
+
+                <!-- TIME AND STRESS MANAGEMENT -->
+                <a href="time and stress mananagmenet.html" class="block relative h-64 rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate-on-scroll">
+                    <img src="https://i.pinimg.com/736x/d8/7c/cf/d87ccf6c788636ccb74610dfb35380b2.jpg" alt="Time and Stress Management" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">TIME AND STRESS MANAGEMENT</h3>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
@@ -433,7 +451,8 @@
       </div>
     </div>
   </div>
-</footer>    <script>
+</footer>    
+<script>
         const btn = document.getElementById('programs-btn');
   const menu = document.getElementById('programs-menu');
 
