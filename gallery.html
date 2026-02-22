@@ -73,7 +73,7 @@
 <body class="bg-white">
 
     <!-- Sticky Header/Navbar -->
- <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+<header class="bg-white shadow-sm py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
     <img src="logo.PNG" alt="Company Logo" class="h-16 w-auto">
             <!-- Desktop Navigation -->
@@ -84,28 +84,12 @@
   <!-- About Us -->
   <a href="about us.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">About Us</a>
 
-  <!-- Programs (Dropdown with Click) -->
-  <div class="relative">
-    <button id="programs-btn" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105 flex items-center">
-      Programs
-      <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
-    <!-- Dropdown menu -->
-    <div id="programs-menu" class="absolute hidden bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-      <a href="workshops.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">Workshops</a>
-      <a href="in-house.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">In-house</a>
-      <a href="virtual.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">Virtual</a>
-      <a href="open-enrollment.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transform transition duration-300 hover:scale-105">Open Enrollment</a>
-    </div>
-  </div>
-
   <!-- Trainers -->
   <a href="trainers.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Trainers</a>
-
+    <a href="workshops.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Workshops</a>
+     <a href="courses.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Courses</a>
   <!-- Blog -->
-  <a href="blog.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Blog</a>
+
 
   <!-- Contact Us -->
   <!-- <a href="contact us.html" class="text-gray-700 hover:text-[#061852] font-medium transition duration-300 transform hover:scale-105">Contact Us</a> -->
@@ -126,7 +110,7 @@
             <a href="trainers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Trainers</a>
             <a href="workshops.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Workshops</a>
             <!-- <a href="contact us.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Contact</a> -->
-                   
+             
             <a href="contact us.html" class="block text-center bg-[#061852] text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 text-sm font-semibold mt-4">Contact</a>
         </nav>
     </header>
@@ -348,19 +332,7 @@
 </footer>
 
     <script>
-        const btn = document.getElementById('programs-btn');
-  const menu = document.getElementById('programs-menu');
-
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-  // Close if clicking outside
-  window.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.add('hidden');
-    }
-  });
+ 
         document.addEventListener('DOMContentLoaded', function() {
             // Mobile Menu Toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');

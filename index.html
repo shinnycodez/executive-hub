@@ -666,19 +666,7 @@ For over 7 years, our purpose has been to empower organizations from the inside 
     </a>
 
     <script>
-        const btn = document.getElementById('programs-btn');
-  const menu = document.getElementById('programs-menu');
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-  // Close if clicking outside
-  window.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.add('hidden');
-    }
-  });
         document.addEventListener('DOMContentLoaded', function() {
             // Mobile Menu Toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
